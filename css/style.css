@@ -208,6 +208,17 @@ navbar{
   .nav-link-heidy::after{
     bottom:-6px;
   }
+  .about-section{
+    text-align: center;
+  }
+
+  .about-text{
+    margin: auto;
+  }
+
+  .about-social{
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px){
