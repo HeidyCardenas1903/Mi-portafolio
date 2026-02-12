@@ -1,229 +1,324 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Heidy</title>
+    <link rel="shortcut icon" href="img/ico.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio | Heidy</title>
-  <link rel="shortcut icon" href="img/ico.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/LogoHeidy.png" alt="Logo Heidy" height="50" />
+          </a>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="img/LogoHeidy.png" alt="Logo Heidy" height="50" />
-        </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav align-items-center gap-lg-4">
-            <li class="nav-item">
-              <a class="nav-link nav-link-heidy active" href="#inicio">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-heidy" href="#sobremi">Sobre Mí</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-heidy" href="#proyectos">Proyectos</a>
-            </li>
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-contactame" href="#contacto">Contáctame</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section id="inicio" class="hero-section">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <!-- Texto -->
-          <div class="col-12 col-lg-6">
-            <p class="hero-kicker mb-2">Mi portafolio</p>
-            <h1 class="hero-title mb-3">
-              Heidy <span class="hero-title-strong">Cardenas</span>
-            </h1>
-            <p class="hero-subtitle mb-4">
-              Apasionada por crear soluciones digitales claras, funcionales y
-              orientadas a generar valor para personas, equipos y
-              organizaciones.
-            </p>
-            <!-- Botones -->
-            <div class="hero-cta d-flex flex-wrap gap-3">
-              <a class="btn btn-hero-primary" href="docs/CV-Heidy-Cardenas.pdf" download>Descargar CV</a>
-              <a class="btn btn-hero-secondary" href="#sobremi">
-                Más información</a>
-            </div>
-            <!-- Redes -->
-            <div class="hero-social mt-4">
-              <a class="hero-social-btn" href="https://www.linkedin.com/in/heidycardenaas1903/" target="_blank"
-                aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a class="hero-social-btn" href="https://github.com/HeidyCardenas1903" target="_blank"
-                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a class="hero-social-btn" href="mailto:hvcardenas2005@gmail.com" aria-label="Email"><i
-                  class="fa-solid fa-envelope"></i></a>
-            </div>
-          </div>
-          <!-- Ilustración -->
-          <div class="col-12 col-lg-6">
-            <div class="hero-visual">
-              <!-- Cambia el src por tu ilustración final -->
-              <img class="hero-illustration" src="img/ImgHeroHeidy.png" alt="Ilustración de Heidy Cardenas" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="sobremi" class="about-section">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <!-- Imagen -->
-          <div class="col-12 col-lg-6 text-center">
-            <img src="img/ImgAboutmeHeidy.png" alt="Heidy Cardenas" class="about-img img-fluid" />
-          </div>
-          <!-- Texto -->
-          <div class="col-12 col-lg-6">
-            <h2 class="section-title mb-3">Sobre Mí</h2>
-            <h3 class="about-title mb-3">
-              ¡Hola! Soy <span>Heidy Cardenas</span>
-            </h3>
-            <p class="about-text">
-              Profesional enfocada en el diseño y gestión de soluciones digitales, orientadas a mejorar procesos,
-              fortalecer equipos y generar valor real para las organizaciones.
-            </p>
-            <p class="about-text">
-              Cuento con experiencia en el desarrollo de proyectos tecnológicos, trabajando de forma colaborativa con
-              diferentes áreas para crear soluciones claras, funcionales y sostenibles.
-            </p>
-            <p class="about-text mb-4">
-              Me motiva aprender constantemente, asumir nuevos retos y aportar ideas que contribuyan al crecimiento de
-              cada proyecto.
-            </p>
-            <!-- Redes -->
-            <div class="hero-social mt-4">
-              <a class="hero-social-btn" href="https://www.linkedin.com/in/heidycardenaas1903/" target="_blank"
-                aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a class="hero-social-btn" href="https://github.com/HeidyCardenas1903" target="_blank"
-                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a class="hero-social-btn" href="mailto:hvcardenas2005@gmail.com" aria-label="Email"><i
-                  class="fa-solid fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="experiencia" class="exp-tools-section">
-  <div class="container">
-
-    <!-- Experiencia -->
-    <div class="exp-block">
-      <h2 class="section-title mb-4">Experiencia</h2>
-
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-12 col-lg-6">
-          <article class="exp-mini-card">
-            <div class="exp-mini-head">
-              <div class="exp-mini-icon">
-                <i class="fa-solid fa-bullseye"></i>
-              </div>
-
-              <div class="exp-mini-title">
-                <h3>Montecello Technology</h3>
-                <p>Product Owner · <span>2022 - 2024</span></p>
-              </div>
-            </div>
-
-            <ul class="exp-mini-list">
-              <li>Gestión de entregas y coordinación con equipos.</li>
-              <li>Organización de requerimientos y seguimiento.</li>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center gap-lg-4">
+              <li class="nav-item">
+                <a class="nav-link nav-link-heidy active" href="#inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-heidy" href="#sobremi">Sobre Mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-heidy" href="#proyectos"
+                  >Proyectos</a
+                >
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a class="btn btn-contactame" href="#contacto">Contáctame</a>
+              </li>
             </ul>
-          </article>
+          </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="col-12 col-lg-6">
-          <article class="exp-mini-card">
-            <div class="exp-mini-head">
-              <div class="exp-mini-icon exp-mini-icon-soft">
-                <i class="fa-solid fa-pen-ruler"></i>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio" class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <!-- Texto -->
+            <div class="col-12 col-lg-6">
+              <p class="hero-kicker mb-2">Mi portafolio</p>
+              <h1 class="hero-title mb-3">
+                Heidy <span class="hero-title-strong">Cardenas</span>
+              </h1>
+              <p class="hero-subtitle mb-4">
+                Apasionada por crear soluciones digitales claras, funcionales y
+                orientadas a generar valor para personas, equipos y
+                organizaciones.
+              </p>
+              <!-- Botones -->
+              <div class="hero-cta d-flex flex-wrap gap-3">
+                <a
+                  class="btn btn-hero-primary"
+                  href="docs/CV-Heidy-Cardenas.pdf"
+                  download
+                  >Descargar CV</a
+                >
+                <a class="btn btn-hero-secondary" href="#sobremi">
+                  Más información</a
+                >
               </div>
-
-              <div class="exp-mini-title">
-                <h3>Proyectos Digitales</h3>
-                <p>UI/UX · <span>2022 - 2023</span></p>
+              <!-- Redes -->
+              <div class="hero-social mt-4">
+                <a
+                  class="hero-social-btn"
+                  href="https://www.linkedin.com/in/heidycardenaas1903/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="hero-social-btn"
+                  href="https://github.com/HeidyCardenas1903"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  class="hero-social-btn"
+                  href="mailto:hvcardenas2005@gmail.com"
+                  aria-label="Email"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
               </div>
             </div>
-
-            <ul class="exp-mini-list">
-              <li>Diseño de interfaces claras y consistentes.</li>
-              <li>Mejora de experiencia y presentación visual.</li>
-            </ul>
-          </article>
+            <!-- Ilustración -->
+            <div class="col-12 col-lg-6">
+              <div class="hero-visual">
+                <!-- Cambia el src por tu ilustración final -->
+                <img
+                  class="hero-illustration"
+                  src="img/ImgHeroHeidy.png"
+                  alt="Ilustración de Heidy Cardenas"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Herramientas -->
-    <div class="tools-block mt-5">
-      <h2 class="section-title mb-4">Herramientas</h2>
-
-      <div class="tools-row">
-        <div class="tool-pill">
-          <div class="tool-icon tool-figma"><i class="fa-brands fa-figma"></i></div>
-          <span>Figma</span>
+      <section id="sobremi" class="about-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <!-- Imagen -->
+            <div class="col-12 col-lg-6 text-center">
+              <img
+                src="img/ImgAboutmeHeidy.png"
+                alt="Heidy Cardenas"
+                class="about-img img-fluid"
+              />
+            </div>
+            <!-- Texto -->
+            <div class="col-12 col-lg-6">
+              <h2 class="section-title mb-3">Sobre Mí</h2>
+              <h3 class="about-title mb-3">
+                ¡Hola! Soy <span>Heidy Cardenas</span>
+              </h3>
+              <p class="about-text">
+                Me apasiona crear soluciones digitales que conecten ideas,
+                procesos y personas de forma clara, funcional y cercana,
+                buscando siempre que cada proyecto tenga un propósito real.
+              </p>
+              <p class="about-text">
+                Disfruto aprender constantemente y trabajar en equipo,
+                participando en proyectos donde pueda aportar, crecer y
+                transformar necesidades en experiencias bien estructuradas. Cada
+                reto representa una oportunidad para fortalecer mis habilidades
+                y ampliar mi visión.
+              </p>
+              <p class="about-text mb-4">
+                Me caracterizan la curiosidad, la constancia y el compromiso con
+                la mejora continua. Creo en el aprendizaje permanente, en hacer
+                las cosas con dedicación y en construir un perfil en evolución,
+                alineado con mis metas y con el valor que quiero aportar.
+              </p>
+              <!-- Redes -->
+              <div class="hero-social mt-4">
+                <a
+                  class="hero-social-btn"
+                  href="https://www.linkedin.com/in/heidycardenaas1903/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="hero-social-btn"
+                  href="https://github.com/HeidyCardenas1903"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  class="hero-social-btn"
+                  href="mailto:hvcardenas2005@gmail.com"
+                  aria-label="Email"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="tool-pill">
-          <div class="tool-icon tool-maps"><i class="fa-solid fa-location-dot"></i></div>
-          <span>Maps</span>
+      <section id="favoritas" class="tools-section">
+        <div class="container">
+          <div class="tools-head text-center">
+            <h2 class="section-title mb-2">Mis herramientas favoritas</h2>
+            <p class="tools-subtitle">
+              Herramientas que utilizo para diseñar, organizar y ejecutar
+              proyectos.
+            </p>
+          </div>
+
+          <div class="tools-grid">
+            <!-- Herramientas Ofimáticas -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/microsoft.png"
+                  alt="Excel"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">Herramientas Ofimáticas</h3>
+              <p class="tool-use">Excel · Word · PowerPoint</p>
+            </article>
+
+            <!-- Figma -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img src="img/tools/figma.png" alt="Figma" class="tool-icon" />
+              </div>
+              <h3 class="tool-name">Figma</h3>
+              <p class="tool-use">Diseño UI/UX · Prototipos</p>
+            </article>
+
+            <!-- Monday -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/monday.png"
+                  alt="Monday"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">Monday</h3>
+              <p class="tool-use">Gestión</p>
+            </article>
+
+            <!-- Azure -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/azuredevops.png"
+                  alt="Azure DevOps"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">Azure DevOps</h3>
+              <p class="tool-use">DevOps</p>
+            </article>
+
+            <!-- GitHub -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/github.png"
+                  alt="GitHub"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">GitHub</h3>
+              <p class="tool-use">Versionado</p>
+            </article>
+
+            <!-- WordPress -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/wordpress.png"
+                  alt="WordPress"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">WordPress</h3>
+              <p class="tool-use">Web</p>
+            </article>
+
+            <!-- Capcut -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/capcut.png"
+                  alt="capcut"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">CapCut</h3>
+              <p class="tool-use">Edición de videos</p>
+            </article>
+
+            <!-- Ilustrator -->
+            <article class="tool-card">
+              <div class="tool-icon-wrap">
+                <img
+                  src="img/tools/photoshop.png"
+                  alt="Photoshop"
+                  class="tool-icon"
+                />
+              </div>
+              <h3 class="tool-name">Photoshop</h3>
+              <p class="tool-use">Diseño</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="tool-pill">
-          <div class="tool-icon tool-tesla"><i class="fa-solid fa-bolt"></i></div>
-          <span>Automación</span>
-        </div>
-
-        <div class="tool-pill">
-          <div class="tool-icon tool-m"><i class="fa-solid fa-m"></i></div>
-          <span>Monday</span>
-        </div>
-
-        <div class="tool-pill">
-          <div class="tool-icon tool-notion"><i class="fa-solid fa-n"></i></div>
-          <span>Notion</span>
-        </div>
-
-        <div class="tool-pill">
-          <div class="tool-icon tool-github"><i class="fa-brands fa-github"></i></div>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  </main>
-  <footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-  </footer>
-</body>
-
+    </main>
+    <footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"
+      ></script>
+      <script src="js/main.js"></script>
+    </footer>
+  </body>
 </html>
