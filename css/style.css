@@ -245,8 +245,8 @@ section#sobremi {
 /* Grid responsive */
 .tools-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
 }
 .tool-card{
   border-radius: 10px;
