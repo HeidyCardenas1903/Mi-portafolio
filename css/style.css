@@ -185,7 +185,9 @@ navbar{
 /* ================================
    ABOUT SECTION
 ================================ */
-
+section#sobremi {
+  background: #ffffff;
+}
 /* Título general */
 .section-title{
   font-size: 1.8rem;
@@ -225,66 +227,69 @@ navbar{
   margin-top: 10px;
 }
 
-.about-social-btn{
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border: 1px solid #E0E2F0;
-  color: #404256;
-  transition: all .25s ease;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.about-social-btn:hover{
-  border-color: #71B8F0;
-  color: #71B8F0;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(113,184,240,0.25);
-}
-
-
 /* ================================
-   RESPONSIVE
+  Herramientas xd
 ================================ */
-
-@media (max-width: 992px){
-
-  .hero-section{
-    padding: 40px 0;
-    text-align:center;
-  }
-
-  .hero-subtitle{
-    margin: auto;
-  }
-
-  .hero-cta{
-    justify-content:center;
-  }
-
-  .hero-social{
-    justify-content:center;
-  }
-
-  .nav-link-heidy::after{
-    bottom:-6px;
-  }
+.tools-section{
+  padding: 80px 0;
+  background: #FEF9F5;
 }
 
-@media (max-width: 576px){
-
-  .hero-title{
-    font-size:2rem;
-  }
-
-  .btn-hero-primary,
-  .btn-hero-secondary{
-    width:100%;
-  }
-
+.tools-subtitle{
+  color:#6B6F85;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  font-weight: 300;
 }
+
+/* Grid responsive */
+.tools-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.tool-card{
+  border-radius: 10px;
+  padding: 20px 5px;
+  text-align: center;
+  transition: all .22s ease;
+}
+
+.tool-card:hover{
+  transform: translateY(-6px);
+}
+
+/* Icon container */
+.tool-icon-wrap{
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  margin: 0 auto 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Icon */
+.tool-icon{
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Name */
+.tool-name{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color:#404256;
+}
+
+/* Use */
+.tool-use{
+  margin: 4px 0 0;
+  color:#6B6F85;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
