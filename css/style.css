@@ -11,7 +11,9 @@ body{
   margin: 0;
   padding: 0;
 }
-
+section{
+  scroll-margin-top: 110px; /* altura navbar + aire */
+}
 
 /* ================================
    NAVBAR
@@ -180,7 +182,76 @@ navbar{
   display:block;
   border-radius: 22px;
 }
+/* ================================
+   ABOUT SECTION
+================================ */
 
+.about-section{
+  background: var(--bg-soft);
+}
+
+/* Título general */
+.section-title{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+/* Subtítulo */
+.about-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-title span{
+  color: var(--accent-color);
+}
+
+/* Texto */
+.about-text{
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 700px;
+}
+
+/* Imagen */
+.about-img{
+  width: 100%;
+  max-width: 260px;
+  border-radius: 24px;
+  background: var(--white-color);
+  padding: 14px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Redes */
+.about-social{
+  display: flex;
+  gap: 14px;
+}
+
+.about-social-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-color);
+  border: 1px solid var(--border-soft);
+  color: var(--dark-color);
+  transition: all .25s ease;
+  text-decoration: none;
+}
+
+.about-social-btn:hover{
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
 
 /* ================================
    RESPONSIVE
@@ -207,17 +278,6 @@ navbar{
 
   .nav-link-heidy::after{
     bottom:-6px;
-  }
-  .about-section{
-    text-align: center;
-  }
-
-  .about-text{
-    margin: auto;
-  }
-
-  .about-social{
-    justify-content: center;
   }
 }
 
