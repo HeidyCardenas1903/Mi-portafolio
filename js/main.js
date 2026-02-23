@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
   const text = "Heidy Cardenas";
-  const speed = 100; // Velocidad escritura (ms)
-  const delay = 200; // Pausa al terminar
+  const speed = 100;
+  const delay = 200; 
 
   const element = document.getElementById("typewriter");
 
