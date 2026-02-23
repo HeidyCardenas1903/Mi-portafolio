@@ -46,3 +46,39 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => observer.observe(section));
 
 });
+
+/* ================================
+   TYPEWRITER HERO
+================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const text = "Heidy Cardenas";
+  const speed = 120; // Velocidad escritura (ms)
+  const delay = 800; // Pausa al terminar
+
+  const element = document.getElementById("typewriter");
+
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+
+    if (!isDeleting) {
+      // Escribiendo
+      element.textContent = text.substring(0, index + 1);
+      index++;
+
+      if (index === text.length) {
+        setTimeout(() => {
+          isDeleting = false;
+        }, delay);
+      }
+
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+});
