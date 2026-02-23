@@ -293,3 +293,39 @@ section#sobremi {
   font-size: .9rem;
 }
 
+/* ================================
+  RESPONSIVE - TOOLS GRID
+================================ */
+
+@media (max-width: 1200px){
+  .tools-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px){
+  .tools-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tool-icon{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 420px){
+  .tools-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991.98px){
+  #sobremi .about-title,
+  #sobremi .section-title{
+    text-align: left;
+  }
+
+  #sobremi .about-text{
+    max-width: 100%;
+  }
+}
