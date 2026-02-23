@@ -47,10 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* ================================
-   TYPEWRITER HERO
-================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const text = "Heidy Cardenas";
@@ -81,4 +77,110 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   typeEffect();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1) Actualiza automáticamente el contador de imágenes en cada card
+  document.querySelectorAll(".project-card2").forEach(card => {
+    const images = (card.getAttribute("data-images") || "")
+      .split(",")
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    const countEl = card.querySelector(".project-count");
+    if (countEl) countEl.textContent = images.length || 0;
+  });
+
+  // 2) Modal binding
+  const modalEl = document.getElementById("projectModal");
+  if (!modalEl) return;
+
+  const pmTitle = document.getElementById("pmTitle");
+  const pmDesc = document.getElementById("pmDesc");
+  const pmTech = document.getElementById("pmTech");
+  const pmCarouselInner = document.getElementById("pmCarouselInner");
+  const pmCounter = document.getElementById("pmCounter");
+  const carouselEl = document.getElementById("pmCarousel");
+
+  modalEl.addEventListener("show.bs.modal", (event) => {
+    const trigger = event.relatedTarget;
+    if (!trigger) return;
+
+    const title = trigger.getAttribute("data-title") || "";
+    const desc = trigger.getAttribute("data-desc") || "";
+    const tech = (trigger.getAttribute("data-tech") || "")
+      .split(",")
+      .map(t => t.trim())
+      .filter(Boolean);
+
+    const images = (trigger.getAttribute("data-images") || "")
+      .split(",")
+      .map(i => i.trim())
+      .filter(Boolean);
+
+    pmTitle.textContent = title;
+    pmDesc.textContent = desc;
+    pmTech.innerHTML = tech.map(t => `<span class="tag">${t}</span>`).join("");
+
+    // Slides
+    pmCarouselInner.innerHTML = images.length
+      ? images.map((src, idx) => `
+          <div class="carousel-item ${idx === 0 ? "active" : ""}">
+            <img src="${src}" class="d-block w-100" alt="Imagen ${idx + 1}">
+          </div>
+        `).join("")
+      : `
+        <div class="carousel-item active">
+          <div class="d-flex align-items-center justify-content-center" style="min-height: 320px;">
+            <p class="m-0" style="color:#6B6F85;font-weight:800;">No hay imágenes aún</p>
+          </div>
+        </div>
+      `;
+
+    // Reset carousel a 0
+    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+    carousel.to(0);
+
+    // Counter inicial
+    const total = images.length || 1;
+    pmCounter.textContent = `Imagen 1 de ${total}`;
+
+    // Re-bind contador al cambiar slide (limpio)
+    carouselEl.onSlideCounter = () => {
+      const active = carouselEl.querySelector(".carousel-item.active");
+      const items = carouselEl.querySelectorAll(".carousel-item");
+      const index = Array.from(items).indexOf(active) + 1;
+      pmCounter.textContent = `Imagen ${index} de ${items.length}`;
+    };
+
+    carouselEl.addEventListener("slid.bs.carousel", carouselEl.onSlideCounter);
+  });
+
+  // Limpieza: quitar listener cuando se cierra
+  modalEl.addEventListener("hidden.bs.modal", () => {
+    if (carouselEl.onSlideCounter) {
+      carouselEl.removeEventListener("slid.bs.carousel", carouselEl.onSlideCounter);
+      carouselEl.onSlideCounter = null;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".project-card2").forEach((card) => {
+    const raw = card.getAttribute("data-images") || "";
+    const images = raw
+      .split(",")
+      .map((i) => i.trim())
+      .filter(Boolean);
+
+    console.log("CARD:", card, "data-images:", images);
+
+    if (images.length > 0) {
+      card.style.backgroundImage = `url("${images[0]}")`;
+      card.style.backgroundSize = "cover";
+      card.style.backgroundPosition = "center";
+      card.style.backgroundRepeat = "no-repeat";
+    }
+  });
 });

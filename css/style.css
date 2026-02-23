@@ -294,9 +294,8 @@ section#sobremi {
 }
 
 /* ================================
-  PROYECTOS
+  PROYECTOS (Bootstrap + tu UI)
 ================================ */
-
 .projects-section{
   padding: 80px 0;
   background: #FFFFFF;
@@ -309,55 +308,25 @@ section#sobremi {
   font-weight: 300;
 }
 
-/* Grid */
-.projects-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-@media (max-width: 1200px){
-  .projects-grid{ grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px){
-  .projects-grid{ grid-template-columns: 1fr; }
-}
-
-/* Card */
+/* Cards */
 .project-card{
-  background:#FEF9F5;
-  border: 1px solid #E0E2F0;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  border: 1px solid #E0E2F0;
+  background: #FEF9F5;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
   transition: all .22s ease;
 }
 
 .project-card:hover{
   transform: translateY(-6px);
   border-color:#71B8F0;
-  box-shadow: 0 18px 36px rgba(113,184,240,0.22);
+  box-shadow: 0 18px 36px rgba(113,184,240,.22);
 }
 
-/* Imagen */
 .project-thumb{
-  width: 100%;
   height: 180px;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.project-thumb img{
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display:block;
-}
-
-/* Body */
-.project-body{
-  padding: 16px;
 }
 
 .project-title{
@@ -375,41 +344,25 @@ section#sobremi {
   line-height: 1.55;
 }
 
-/* Tags */
-.project-tags{
-  list-style:none;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  padding: 0;
-  margin: 0 0 14px;
-}
-
-.project-tags li{
-  border: 1px solid #E0E2F0;
+/* Badges como pills */
+.project-badge{
   background:#FFFFFF;
   color:#505062;
+  border: 1px solid #E0E2F0;
   border-radius: 999px;
-  padding: .22rem .65rem;
-  font-size: .85rem;
-  font-weight: 700;
+  padding: .28rem .7rem;
+  font-weight: 800;
+  font-size: .82rem;
 }
 
-/* Acciones */
-.project-actions{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
+/* Botón */
 .project-btn{
   background:#f3c77a;
   color:#2b2b2b;
-  font-weight: 800;
+  font-weight: 900;
   border-radius: 10px;
-  padding: .55rem 1rem;
-  border: none;
+  padding: .65rem 1rem;
+  border:none;
   transition: all .2s ease;
 }
 
@@ -418,17 +371,363 @@ section#sobremi {
   transform: translateY(-2px);
 }
 
-.project-link{
-  color:#404256;
-  text-decoration:none;
+/* ================================
+  MODAL (Bootstrap + tu UI)
+================================ */
+.project-modal{
+  background: #0f0f10;
+  border: 2px solid rgba(113,184,240,.65);
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.project-modal-header{
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  padding: 16px 18px;
+  background: #0f0f10;
+}
+
+.project-modal-title{
+  font-weight: 900;
+  color:#fff;
+}
+
+.project-modal-subtitle{
+  color: rgba(255,255,255,.72);
+  font-weight: 600;
+}
+
+.project-modal-close{
+  filter: invert(1);
+  opacity: .9;
+}
+
+.project-modal-body{
+  padding: 18px;
+}
+
+.project-carousel{
+  position: relative;
+}
+
+.project-carousel .carousel-inner{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+
+.project-carousel img{
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  background: rgba(0,0,0,.15);
+}
+
+/* Controles del carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.6));
+}
+
+.project-carousel-counter{
+  text-align:center;
+  margin-top: 10px;
+  color: rgba(255,255,255,.65);
   font-weight: 800;
   font-size: .9rem;
 }
 
-.project-link i{
+/* Texto del modal */
+.project-modal-desc{
+  color: rgba(255,255,255,.85);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Tags tecnología */
+.project-modal-tech{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-modal-tech .tag{
+  background: rgba(113,184,240,.16);
+  border: 1px solid rgba(113,184,240,.35);
+  color:#fff;
+  border-radius: 999px;
+  padding: .22rem .7rem;
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+/* Links */
+.project-modal-links{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-modal-live{
+  background:#f3c77a;
+  color:#2b2b2b;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: .65rem 1.1rem;
+  border:none;
+  transition: all .2s ease;
+}
+
+.project-modal-live:hover{
+  background:#ffc261;
+  transform: translateY(-2px);
+}
+
+.project-modal-code{
+  color: rgba(255,255,255,.85);
+  font-weight: 900;
+  text-decoration:none;
+}
+
+.project-modal-code i{
   margin-left: 6px;
   color:#71B8F0;
 }
+
+/* ================================
+  PROYECTOS (Hover overlay + Bootstrap modal)
+================================ */
+.projects-section{
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.projects-subtitle{
+  color:#6B6F85;
+  max-width: 760px;
+  margin: 0 auto 28px;
+  font-weight: 300;
+}
+
+/* Card como botón (clickeable) */
+.project-card2{
+  width: 100%;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 280px;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.project-card2::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity: .85;
+}
+
+.project-card2:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(113,184,240,.22);
+
+}
+
+/* Overlay */
+.project-overlay{
+  position:absolute;
+  inset: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 18px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .22s ease;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.60));
+}
+
+.project-card2:hover .project-overlay{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Título + contador */
+.project-overlay-top{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-overlay-title{
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.12rem;
+}
+
+.project-overlay-count{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+  font-size: .9rem;
+}
+
+.project-overlay-count i{
+  color: #f3c77a;
+}
+
+/* Tecnologías (pills) */
+.project-overlay-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-pill{
+  display:inline-flex;
+  align-items:center;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 900;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+}
+
+/* CTA */
+.project-overlay-cta{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 900;
+  font-size: .95rem;
+}
+
+.project-overlay-cta i{
+  color:#71B8F0;
+}
+
+/* ================================
+  MODAL limpio (tu UI)
+================================ */
+.pm-clean{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #E0E2F0;
+  background: #FEF9F5;
+  position: relative;
+}
+
+.pm-body{
+  padding: 18px;
+}
+
+/* botón X arriba derecha */
+.pm-close{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #E0E2F0;
+  background: #ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 5;
+  transition: all .2s ease;
+}
+
+.pm-close i{
+  font-size: 1.1rem;
+  color:#404256;
+}
+
+.pm-close:hover{
+  transform: translateY(-2px);
+  border-color:#71B8F0;
+}
+
+/* Carrusel */
+.pm-carousel{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #E0E2F0;
+  background: #ffffff;
+}
+
+.pm-carousel img{
+  width:100%;
+  max-height: 520px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.pm-counter{
+  text-align:center;
+  margin-top: 10px;
+  color:#6B6F85;
+  font-weight: 800;
+  font-size: .9rem;
+}
+
+/* Info */
+.pm-title{
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color:#404256;
+}
+
+.pm-desc{
+  margin: 0 0 14px;
+  color:#505062;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.pm-tech{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pm-tech .tag{
+  background:#ffffff;
+  border: 1px solid #E0E2F0;
+  color:#505062;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .85rem;
+}
+
+
 
 /* ================================
   RESPONSIVE - TOOLS GRID
@@ -464,5 +763,17 @@ section#sobremi {
 
   #sobremi .about-text{
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px){
+  .project-card2{
+    min-height: 240px;
+  }
+  .pm-body{
+    padding: 12px;
+  }
+  .pm-carousel img{
+    max-height: 360px;
   }
 }
