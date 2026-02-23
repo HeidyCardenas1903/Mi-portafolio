@@ -434,9 +434,8 @@ section#sobremi {
 .project-carousel-counter{
   text-align:center;
   margin-top: 10px;
-  color: rgba(255,255,255,.65);
-  font-weight: 800;
-  font-size: .9rem;
+  color:#6B6F85;
+  font-size: .2rem;
 }
 
 /* Texto del modal */
@@ -635,26 +634,25 @@ section#sobremi {
   MODAL limpio (tu UI)
 ================================ */
 .pm-clean{
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #E0E2F0;
   background: #FEF9F5;
   position: relative;
 }
 
 .pm-body{
-  padding: 18px;
+  padding: 20px;
 }
 
-/* botón X arriba derecha */
+
 .pm-close{
   position:absolute;
   top: 10px;
   right: 10px;
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  border: 1px solid #E0E2F0;
+  border-radius: 100px;
+  border: none;
   background: #ffffff;
   display:flex;
   align-items:center;
@@ -665,35 +663,26 @@ section#sobremi {
 
 .pm-close i{
   font-size: 1.1rem;
-  color:#404256;
+  color:#000000;
 }
 
 .pm-close:hover{
   transform: translateY(-2px);
-  border-color:#71B8F0;
+  border-color:#ffc261;
 }
 
 /* Carrusel */
-.pm-carousel{
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #E0E2F0;
-  background: #ffffff;
-}
-
 .pm-carousel img{
   width:100%;
-  max-height: 520px;
+  max-height: 500px;
   object-fit: contain;
-  background: #ffffff;
 }
 
 .pm-counter{
   text-align:center;
   margin-top: 10px;
-  color:#6B6F85;
-  font-weight: 800;
-  font-size: .9rem;
+  color:#b2b4c0;
+  font-size: .8rem;
 }
 
 /* Info */
@@ -717,16 +706,14 @@ section#sobremi {
 }
 
 .pm-tech .tag{
-  background:#ffffff;
-  border: 1px solid #E0E2F0;
+  background:#E0E2F0;
+  border: 2px solid #D1D3E7;
   color:#505062;
   padding: .28rem .7rem;
   border-radius: 999px;
-  font-weight: 900;
+  font-weight: 600;
   font-size: .85rem;
 }
-
-
 
 /* ================================
   RESPONSIVE - TOOLS GRID
