@@ -716,6 +716,130 @@ section#sobremi {
 }
 
 /* ================================
+  EXPERIENCIA
+================================ */
+.exp-section {
+  padding: 80px 0;
+  background: #FEF9F5;
+}
+
+.exp-subtitle {
+  color: #6B6F85;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  font-weight: 300;
+}
+
+/* Línea de tiempo */
+.exp-timeline {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-left: 32px;
+}
+
+.exp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #E0E2F0;
+  border-radius: 999px;
+}
+
+/* Cada ítem */
+.exp-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Punto en la línea */
+.exp-dot {
+  position: absolute;
+  left: -27px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f3c77a;
+  border: 2px solid #FEF9F5;
+  box-shadow: 0 0 0 2px #f3c77a;
+}
+
+/* Tarjeta */
+.exp-card {
+  border-radius: 14px;
+  padding: 22px 24px;
+  background: #fffefc;
+}
+
+/* Cabecera de la tarjeta */
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #404256;
+}
+
+.exp-company {
+  margin: 0;
+  font-size: .92rem;
+  font-weight: 600;
+  color: #71B8F0;
+}
+
+.exp-period {
+  font-size: .82rem;
+  font-weight: 600;
+  color: #6B6F85;
+  background: #f9e899;
+  border-radius: 999px;
+  padding: .25rem .75rem;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* Descripción */
+.exp-desc {
+  color: #6B6F85;
+  font-size: .95rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+/* Tags */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tag {
+  background: #fafafa;
+  border: 2px solid #D1D3E7;
+  color: #505062;
+  padding: .22rem .65rem;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+/* ================================
   RESPONSIVE - TOOLS GRID
 ================================ */
 
