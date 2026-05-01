@@ -791,16 +791,16 @@ section#sobremi {
 
 .exp-role {
   margin: 0 0 4px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #404256;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #71B8F0;
 }
 
-.exp-company {
+.exp-company-title{
   margin: 0;
-  font-size: .92rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #71B8F0;
+  color: #404256;
 }
 
 .exp-period {
@@ -837,6 +837,10 @@ section#sobremi {
   border-radius: 999px;
   font-size: .82rem;
   font-weight: 600;
+}
+.exp-logo {
+  width: 35px;
+  transition: all 0.2s ease;
 }
 
 /* ================================
