@@ -167,6 +167,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const filterBtns = document.querySelectorAll(".projects-filter .filter-btn");
+  const projectCols = document.querySelectorAll("#proyectos .row > [data-category]");
+
+  const applyFilter = (filter) => {
+    projectCols.forEach((col) => {
+      const match = filter === "all" || col.getAttribute("data-category") === filter;
+      col.style.display = match ? "" : "none";
+    });
+  };
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      applyFilter(btn.getAttribute("data-filter"));
+    });
+  });
+
+  // Filtro predeterminado al cargar: el que tenga la clase "active" en el HTML
+  const defaultBtn = document.querySelector(".projects-filter .filter-btn.active") || filterBtns[0];
+  if (defaultBtn) applyFilter(defaultBtn.getAttribute("data-filter"));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const setCardBg = (card, src) => {
+    card.style.backgroundImage = `url("${src}")`;
+    card.style.backgroundSize = "cover";
+    card.style.backgroundPosition = "center";
+    card.style.backgroundRepeat = "no-repeat";
+  };
+
   document.querySelectorAll(".project-card2").forEach((card) => {
     const raw = card.getAttribute("data-images") || "";
     const images = raw
@@ -174,13 +205,55 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((i) => i.trim())
       .filter(Boolean);
 
-    console.log("CARD:", card, "data-images:", images);
-
     if (images.length > 0) {
-      card.style.backgroundImage = `url("${images[0]}")`;
-      card.style.backgroundSize = "cover";
-      card.style.backgroundPosition = "center";
-      card.style.backgroundRepeat = "no-repeat";
+      setCardBg(card, images[0]);
+      return;
     }
+
+    // data-cover es opcional (ej. tarjetas de video): si el archivo aún
+    // no existe, se deja el fondo por defecto (degradado) en vez de romperse.
+    const cover = card.getAttribute("data-cover");
+    if (cover) {
+      const probe = new Image();
+      probe.onload = () => setCardBg(card, cover);
+      probe.src = cover;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("photoLightbox");
+  if (!lightbox) return;
+
+  const lightboxImg = document.getElementById("photoLightboxImg");
+  const closeBtn = document.getElementById("photoLightboxClose");
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  document.querySelectorAll(".project-photo-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      openLightbox(card.getAttribute("data-cover"), card.getAttribute("data-title"));
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+
+  // Clic fuera de la imagen (en el fondo borroso) cierra el preview
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("active")) closeLightbox();
   });
 });
