@@ -92,7 +92,7 @@
               <div class="hero-cta d-flex flex-wrap gap-3">
                 <a
                   class="btn btn-hero-primary"
-                  href="docs/CC1012331152_Hoja de vida _Heidy Cardenas.pdf"
+                  href="docs/EnglishCV__Heidy Cardenas (1).pdf"
                   download
                   >Descargar CV</a
                 >
@@ -365,9 +365,15 @@
             </p>
           </div>
 
+          <div class="projects-filter" role="tablist" aria-label="Filtrar proyectos por categoría">
+            <button type="button" class="filter-btn active" data-filter="desarrollo">Desarrollo</button>
+            <button type="button" class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button type="button" class="filter-btn" data-filter="multimedia">Contenido multimedia</button>
+          </div>
+
           <div class="row g-4">
             <!-- Electrotech-->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -402,7 +408,7 @@
             </div>
 
             <!-- Gym card -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -436,7 +442,7 @@
             </div>
 
             <!-- Portafolio card-->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -471,7 +477,7 @@
             </div>
 
             <!-- Novartec card-->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -505,7 +511,7 @@
             </div>
 
             <!-- soul card -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -537,45 +543,9 @@
                 </div>
               </button>
             </div>
-
-            <!-- Piezas-->
-            <div class="col-12 col-md-6 col-lg-4">
-              <button
-                type="button"
-                class="project-card2"
-                data-bs-toggle="modal"
-                data-bs-target="#projectModal"
-                data-title="Creación de piezas"
-                data-desc="Piezas gráficas para comunicación digital, presentaciones y contenido visual."
-                data-tech="Figma,Photoshop"
-                data-images="img/projects/piezas-1.jpg,img/projects/piezas-2.jpg,img/projects/piezas-3.jpg,img/projects/piezas-4.jpg, img/projects/piezas-5.jpg"
-              >
-                <div class="project-overlay">
-                  <div class="project-overlay-top">
-                    <h3 class="project-overlay-title">
-                      Creación de contenido multimedia
-                    </h3>
-                    <div class="project-overlay-count">
-                      <i class="fa-regular fa-images"></i>
-                      <span class="project-count">3</span>
-                    </div>
-                  </div>
-
-                  <div class="project-overlay-tags">
-                    <span class="project-pill">Figma</span>
-                    <span class="project-pill">Photoshop</span>
-                    <span class="project-pill">Diseño</span>
-                  </div>
-
-                  <div class="project-overlay-cta">
-                    Ver detalles <i class="fa-solid fa-arrow-right"></i>
-                  </div>
-                </div>
-              </button>
-            </div>
-
+            
             <!-- mockups -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="uiux">
               <button
                 type="button"
                 class="project-card2"
@@ -612,7 +582,7 @@
             </div>
 
             <!-- Cuartuz -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4" data-category="desarrollo">
               <button
                 type="button"
                 class="project-card2"
@@ -648,6 +618,171 @@
                 </div>
               </button>
             </div>
+
+            <!-- Flyers (galería suelta dentro de Contenido multimedia, sin modal) -->
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-1.jpg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Figma</span>
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-2.jpg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Figma</span>
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-3.jpg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Figma</span>
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-4.jpg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Figma</span>
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-5.jpg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Figma</span>
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <a
+                href="https://www.tiktok.com/@whoisheidy_/video/7647748563568545044?is_from_webapp=1&sender_device=pc&web_id=7574126277527946763"
+                target="_blank"
+                rel="noopener"
+                class="project-card2 project-video-card"
+                data-title="Colaboración con @hubb_coll"
+                data-cover="img/projects/video-1.avif"
+              >
+                <div class="project-video-play"><i class="fa-solid fa-play"></i></div>
+                <div class="project-overlay">
+                  <div class="project-overlay-top">
+                    <h3 class="project-overlay-title">Colaboración con @hubb_coll</h3>
+                    <div class="project-overlay-count">
+                      <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Tik Tok</span>
+                    <span class="project-pill">Cap Cut</span>
+                  </div>
+
+                  <div class="project-overlay-cta">
+                    Ver video <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <a
+                href="https://www.tiktok.com/@whoisheidy_/photo/7616207962419350805?is_from_webapp=1&sender_device=pc&web_id=7574126277527946763"
+                target="_blank"
+                rel="noopener"
+                class="project-card2 project-video-card"
+                data-title="Promoción de Producto - Lenovo"
+                data-cover="img/projects/video-2.jpeg"
+              >
+                <div class="project-video-play"><i class="fa-solid fa-play"></i></div>
+                <div class="project-overlay">
+                  <div class="project-overlay-top">
+                    <h3 class="project-overlay-title">Promoción de Producto - Lenovo</h3>
+                    <div class="project-overlay-count">
+                      <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">TikTok</span>
+                    <span class="project-pill">Carrusel</span>
+                    </span>
+                  </div>
+
+                  <div class="project-overlay-cta">
+                    Ver video <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <a
+                href="https://www.instagram.com/reel/DZJWm48OJiu/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA=="
+                target="_blank"
+                rel="noopener"
+                class="project-card2 project-video-card"
+                data-title="Skin Routine - @TrendybyCamilaUrrego"
+                data-cover="img/projects/video-3.png"
+              >
+                <div class="project-video-play"><i class="fa-solid fa-play"></i></div>
+                <div class="project-overlay">
+                  <div class="project-overlay-top">
+                    <h3 class="project-overlay-title">Skin Routine - @TrendybyCamilaUrrego</h3>
+                    <div class="project-overlay-count">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Reels</span>
+                    <span class="project-pill">Cap Cut</span>
+                  </div>
+
+                  <div class="project-overlay-cta">
+                    Ver video <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-category="multimedia">
+              <div class="project-card2 project-photo-card" data-cover="img/projects/piezas-6.jpeg">
+                <div class="project-overlay">
+                  <div class="project-overlay-tags">
+                    <span class="project-pill">Photoshop</span>
+                    <span class="project-pill">Diseño</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -767,6 +902,14 @@
           </div>
         </div>
       </section>
+
+      <!-- Lightbox de fotos (galería suelta en Contenido multimedia) -->
+      <div class="photo-lightbox" id="photoLightbox">
+        <button type="button" class="photo-lightbox-close" id="photoLightboxClose" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="" alt="" class="photo-lightbox-img" id="photoLightboxImg" />
+      </div>
 
       <!-- MODAL Projects -->
       <div
